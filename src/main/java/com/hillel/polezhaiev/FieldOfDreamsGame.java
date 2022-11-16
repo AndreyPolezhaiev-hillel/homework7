@@ -27,6 +27,30 @@ public class FieldOfDreamsGame {
         return words[randIndex];
     }
 
+    public void printFruits(){
+        System.out.println("IT IS A LITTLE COMPUTER GAME");
+        System.out.println("Computer wondered a word from a basket of fruits:");
+        System.out.println();
+
+        for (int i = 0; i < words.length; i++) {
+
+            if(i == words.length - 1){
+                System.out.println(" " + words[i] + ".");
+                break;
+
+            }
+            System.out.print(" " + words[i] + ",");
+
+            if (i % 4 == 0 && i != 0){
+                System.out.println();
+
+            }
+        }
+
+        System.out.println();
+        System.out.println("Your purpose to guess that word");
+    }
+
     public boolean check(String arrayWord){
         Scanner scanner = new Scanner(System.in);
 
