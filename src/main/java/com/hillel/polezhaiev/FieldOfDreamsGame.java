@@ -50,9 +50,10 @@ public class FieldOfDreamsGame {
         System.out.println();
         System.out.println("Your purpose to guess that word");
     }
-
     public boolean check(String arrayWord){
         Scanner scanner = new Scanner(System.in);
+        String result = "##########";
+        StringBuilder builder = new StringBuilder(result);
 
         System.out.print("Enter a word from a keyboard: ");
 
@@ -69,11 +70,19 @@ public class FieldOfDreamsGame {
             } else {
                 System.out.println("You aren't right!");
 
-                System.out.println(
-                        "Wondered word is: " +
-                                arrayWord.substring(0, 2) +
-                                "########################");
+                for (int i = 0; i < arrayWord.length(); i++) {
 
+                    if(i == arrayWord.length() || i == userWord.length()){
+                        break;
+                    }
+
+                    if(userWord.charAt(i) == arrayWord.charAt(i)){
+                        builder.setCharAt(i, arrayWord.charAt(i));
+
+                    }
+                }
+
+                System.out.println("Wondered word is: " + builder);
                 System.out.print("Try again: ");
 
             }

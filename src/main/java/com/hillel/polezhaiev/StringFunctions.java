@@ -34,15 +34,20 @@ public class StringFunctions {
 
         }
 
-        StringBuilder builder = new StringBuilder(nRev);
-        return builder.reverse().toString();
+        String result = "";
+
+        for (int i = nRev.length() - 1; i >= 0; i--) {
+            result += nRev.charAt(i);
+
+        }
+        return result;
     }
 
     public boolean isPalindrome(String str){
 
         char [] result = str.toCharArray();
 
-        for (int i = 0; i < result.length; i++) {
+        for (int i = 0; i < result.length / 2; i++) {
             if(!(result[i] == result[result.length - i - 1])){
                 return false;
 

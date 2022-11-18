@@ -16,7 +16,7 @@ public class Main {
         System.out.println(function.stringReverse("qwerty"));
         System.out.println("////////////////////////////");
         System.out.println();
-        System.out.println(function.isPalindrome("qbcbq"));
+        System.out.println(function.isPalindrome("12321"));
         System.out.println("////////////////////////////");
         System.out.println();
 
