@@ -10,7 +10,7 @@ public class Main {
         System.out.println(function.findSymbolOccurance("or1tt1o", '1'));
         System.out.println("////////////////////////////");
         System.out.println();
-        System.out.println(function.findWordPosition("hello", "he"));
+        System.out.println(function.findWordPosition("hello", "llo"));
         System.out.println("////////////////////////////");
         System.out.println();
         System.out.println(function.stringReverse("qwerty"));

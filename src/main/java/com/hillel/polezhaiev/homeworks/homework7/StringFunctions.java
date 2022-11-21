@@ -29,18 +29,15 @@ public class StringFunctions {
     }
 
     public String stringReverse(String nRev){
-        if(nRev.length() == 0){
-            return "";
+        if(nRev.length() == 0 || nRev == null || nRev.length() == 1){
+            return nRev;
 
         }
 
-        String result = "";
+        int length = nRev.length();
+        char c = nRev.charAt(nRev.length() - 1);
 
-        for (int i = nRev.length() - 1; i >= 0; i--) {
-            result += nRev.charAt(i);
-
-        }
-        return result;
+        return c + stringReverse(nRev.substring(0, nRev.length() - 1));
     }
 
     public boolean isPalindrome(String str){
