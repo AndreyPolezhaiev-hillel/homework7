@@ -5,8 +5,10 @@ public class ArrayValueCalculator {
     public int doCalc(String [][] arr) throws ArraySizeException, ArrayDataException {
         int sum = 0;
 
-        if(arr.length > 4 || arr.length < 4 || arr[0].length > 4 || arr[0].length < 4){
-            throw new ArraySizeException();
+        for (int i = 0; i < arr.length; i++) {
+            if(arr.length > 4 || arr.length < 4 || arr[i].length > 4 || arr[i].length < 4){
+                throw new ArraySizeException();
+            }
         }
 
 
